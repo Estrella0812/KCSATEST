@@ -26,6 +26,10 @@ section{
   display:none;
 }
 
+.topnav a:nth-of-type(5){
+  padding: 25px 40px;
+}
+
 .topnav a{
   color:white;
   text-decoration: none;
@@ -38,127 +42,6 @@ section{
   max-width: 200px;
   padding: 10px
 }
-
-
-@media only screen and (max-width: 1000px) {
-
-section{
-  margin: auto;
-  text-align: center;
-}
-
-  /*TOPNAV*/
-.topnav{
-  width:960px;
-  display:flex;
-  align-items: center;
-  background-color: #e6002d;
-  margin:auto;
-  margin-top: 35px;
-}
-
-#menuicon{
-  position:absolute;
-  display:block;
-  font-size: 30px;
-  color: white;
-  margin-left: 850px;
-}
-
-.menuList{
-  display: block;
-  position: absolute;
-  background-color: #811228;
-  min-width: 960px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  top: 145px;
-}
-
-.menuList a{
-  float: none;
-  color: white;
-  padding: 15px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  border-left: none;
-}
-
-#menuList {
-  overflow:hidden;
-  transition: 0.5s;
-}
-
-.menuList a:nth-of-type(5){
-  display:none;
-}
-
-.topnav img{
-  max-width: 200px;
-  padding: 10px
-}
-
-
-
-/*STATISTICS*/
-.stats-container{
-  position: relative;
-  max-width: 700px;
-  padding: 15px 0;
-  left: 18%;
-}
-
-.club-stats img, .player-stats img{
-  width: 100%;
-}
-
-.title{
-  color:#e6002d;
-  font-size: 25px;
-  align-items: center;
-  position: relative;
-  width: fit-content;
-}
-
-.title img{
-  width: 50px;
-}
-
-.club-stats, .player-stats{
-  border: black 2px solid;
-  width: fit-content;
-}
-
-.stats-button button{
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  font-weight: bold;
-  font-size: 25px;
-  color: grey;
-  margin: 0px 15px;
-}
-
-.stats-button button:nth-of-type(1){
-  color:black;
-}
-
-.stats-button button:hover{
-  color: darkgray;
-}
-
-.stats-button{
-  width: fit-content;
-  margin:auto;
-}
-
-}
-
-
-
 
 
 /*SLIDE SHOW*/
@@ -211,8 +94,6 @@ img {vertical-align: middle;}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-
-
   .text {font-size: 11px}
 }
 
@@ -222,31 +103,192 @@ hr{
 }
 
 
+@media only screen and (max-width: 1000px) {
+  .topnav{
+    background-color: #e6002d;
+    min-width: 960px;
+  }
 
-
-/*SCHEDULE*/
-.schedule img{
-  width: 960px;
-  margin: auto;
-  padding-top: 10px;
+  .topnav a{
+    width: fit-content;
+    color:white;
+    text-decoration: none;
+    padding: 25px 23px;
+    border-left: 1px solid white;
+    font-weight: bold;
+  }
+ 
 }
 
 
+@media only screen and (max-width: 420px) {
+  body{
+    width: 420px;
+  }
 
-/*AD*/
-.ad-container img{
-  width: 24.5%;
-  padding: 30px 3px;
-  padding-bottom: 20px;
+  section{
+    margin: auto;
+    text-align: center;
+  }
+
+  .topnav{
+    max-width: 420px;
+    background-color: #e6002d;
+    margin-top: 20px;
+  }
+
+  #menuicon{
+    position:absolute;
+    display:block;
+    font-size: 30px;
+    color: white;
+    margin-left: 90%;
+  }
+  
+  .menuList{
+    display: block;
+    position: absolute;
+    background-color: #811228;
+    min-width: 960px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 107px;
+  }
+  
+  .menuList a{
+    float: none;
+    color: white;
+    padding: 15px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-left: none;
+  }
+  
+  #menuList {
+    overflow:hidden;
+    transition: 0.5s;
+  }
+  
+  .menuList a:nth-of-type(5){
+    display:none;
+  }
+  
+  .topnav img{
+    max-width: 150px;
+    padding: 10px
+  }
+
+
+  /*SLIDE SHOW*/
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+  }
+
+  /*SCHEDULE*/
+  .schedule img{
+    max-width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /*AD*/
+  .ad-container{
+    position: relative;
+    min-width: 100%;
+    margin-top: 10px;
+    margin-right: 2px;
+  }
+
+  .ad-container img{
+    max-width: 48%;
+    margin: 2px 2px;
+  }
+
+   /*STATISTICS*/
+   .stats-container{
+    position: relative;
+    max-width: 95%;
+    padding: 5px 0;
+    margin: auto;
+  }
+  
+  .stats-child:nth-of-type(2){
+    margin-top: 35px;
+  }
+
+  .club-stats img, .player-stats img{
+    width: 100%;
+  }
+
+  .club-stats, .player-stats{
+    border: black 1px solid;
+    width: fit-content;
+  }
+
+  .title{
+    color:#e6002d;
+    font-size: 15px;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    bottom: -10px;
+  }
+
+  .stats-button button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    color: grey;
+    margin: 0px 2px;
+  }
+  
+ 
+  .bot-logo{
+    max-width: 100%;
+  }
+
+  /*BOTNAV*/
+  .botnav-img{
+    
+  }
+
+  .botnav-buttons{
+  }
+
 }
 
-.ad-container{
-  display: flex;
-  min-width: 955px;
-}
 
-@media only screen and (min-width: 1000px) {
-/*STATISTICS*/
+@media only screen and (min-width: 420px) {
+  /*SCHEDULE*/
+  .schedule img{
+    max-width: 477px;
+  }
+
+  .schedule{
+    padding-top: 15px;
+    min-width: 960px;
+  }
+
+  /*AD*/
+  .ad-container img{
+    width: 24.5%;
+    padding: 30px 3px;
+    padding-bottom: 20px;
+  }
+
+  .ad-container{
+    display: flex;
+    min-width: 955px;
+  }
+
+  /*STATISTICS*/
 .stats-container{
   display: inline-flex;
   align-items: center;
@@ -303,9 +345,11 @@ hr{
 
 
 
+
 .bot-logo{
   width: 960px;
 }
+
 
 /*BOTNAV*/
 .botnav-container img{
