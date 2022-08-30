@@ -14,7 +14,6 @@ section{
 
 /*TOPNAV*/
 .topnav{
-  max-width: 960px;
   display:flex;
   align-items: center;
   background-color: #e6002d;
@@ -103,28 +102,7 @@ hr{
 }
 
 
-@media only screen and (max-width: 1000px) {
-  .topnav{
-    background-color: #e6002d;
-    min-width: 960px;
-  }
-
-  .topnav a{
-    width: fit-content;
-    color:white;
-    text-decoration: none;
-    padding: 25px 23px;
-    border-left: 1px solid white;
-    font-weight: bold;
-  }
- 
-}
-
-
 @media only screen and (max-width: 420px) {
-  body{
-    width: 420px;
-  }
 
   section{
     margin: auto;
@@ -255,17 +233,39 @@ hr{
   }
 
   /*BOTNAV*/
-  .botnav-img{
-    
+  .botnav-container{
+    max-width: 420px;
+  }
+  .botnav-container img{
+    position: relative;
+    padding-bottom: 30px;
+    max-width: 420px;
   }
 
   .botnav-buttons{
+    position: absolute;
+    bottom: 5px;
+  }
+
+  .botnav-buttons img{
+    width: 15px;
+    right: -300px;
+  }
+
+  hr{
+    max-width: 100%;
   }
 
 }
 
 
 @media only screen and (min-width: 420px) {
+  /*TOPNAV*/
+  .topnav{
+    min-width: 960px;
+  }
+
+
   /*SCHEDULE*/
   .schedule img{
     max-width: 477px;
@@ -341,8 +341,26 @@ hr{
 .club-stats img, .player-stats img{
   width: 100%;
 }
-}
 
+/*BOTNAV*/
+  .botnav-container img{
+    max-width: 960px;
+  }
+
+  .botnav-buttons img{
+    width: 13%;
+    border-radius: 50%;
+    padding: 0px 0px;
+    margin: 0px -3px;
+  }
+
+  .botnav-buttons{
+    position: absolute;
+    bottom: 10px;
+    right: -13%;
+  }
+  
+}
 
 
 
@@ -354,24 +372,8 @@ hr{
 /*BOTNAV*/
 .botnav-container img{
   position: relative;
-  max-width: 960px;
   padding-bottom: 30px;
 }
-
-.botnav-buttons{
-  position: absolute;
-  bottom: 40px;
-  right: -100px;
-}
-
-.botnav-buttons img{
-  width: 13%;
-  border-radius: 50%;
-  padding: 0px 0px;
-  margin: 0px -3px;
-}
-
-
 /*UNDER CONSTRUCTION*/
 
 .under-construction{
