@@ -14,6 +14,7 @@ section{
 
 /*TOPNAV*/
 .topnav{
+  max-width: 960px;
   display:flex;
   align-items: center;
   background-color: #e6002d;
@@ -23,10 +24,6 @@ section{
 
 #menuicon{
   display:none;
-}
-
-.topnav a:nth-of-type(5){
-  padding: 25px 40px;
 }
 
 .topnav a{
@@ -43,9 +40,144 @@ section{
 }
 
 
+@media only screen and (max-width: 420px) {
+
+section{
+  margin: auto;
+  text-align: center;
+}
+
+  /*TOPNAV*/
+.topnav{
+  max-width: 960px;
+  display:flex;
+  align-items: center;
+  background-color: #e6002d;
+  margin:auto;
+  margin-top: 35px;
+}
+
+#menuicon{
+  position:absolute;
+  display:block;
+  font-size: 30px;
+  color: white;
+  margin-left: 90%;
+}
+
+.menuList{
+  display: block;
+  position: absolute;
+  background-color: #811228;
+  min-width: 960px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 120px;
+}
+
+.menuList a{
+  float: none;
+  color: white;
+  padding: 15px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-left: none;
+}
+
+#menuList {
+  overflow:hidden;
+  transition: 0.5s;
+}
+
+.menuList a:nth-of-type(5){
+  display:none;
+}
+
+.topnav img{
+  max-width: 150px;
+  padding: 10px
+}
+
+
+
+/*STATISTICS*/
+.stats-container{
+  position: relative;
+  max-width: 700px;
+  padding: 15px 0;
+}
+
+.club-stats img, .player-stats img{
+  width: 100%;
+}
+
+.title{
+  color:#e6002d;
+  font-size: 15px;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+.title p{
+  background-color: blue;
+}
+
+.title img{
+  width: 40px;
+}
+
+.club-stats, .player-stats{
+  border: black 2px solid;
+  width: fit-content;
+}
+
+.stats-button button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  color: grey;
+  margin: 0px 5px;
+}
+
+.stats-button button:nth-of-type(1){
+  color:black;
+}
+
+.stats-button button:hover{
+  color: darkgray;
+}
+
+.stats-button{
+  width: fit-content;
+  margin:auto;
+}
+
+
+/*SLIDE*/
+.slideshow-container {
+  max-width: 960px;
+  position: relative;
+  margin: auto;
+  padding-top: 10px;
+}
+
+}
+
+
+
+
+
 /*SLIDE SHOW*/
 .mySlides {display: none;}
-img {vertical-align: middle;}
+.slideshow-container img {
+  vertical-align: middle;
+  width: 100%;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -92,7 +224,9 @@ img {vertical-align: middle;}
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 420px) {
+
+
   .text {font-size: 11px}
 }
 
@@ -102,193 +236,32 @@ hr{
 }
 
 
-@media only screen and (max-width: 420px) {
-
-  section{
-    margin: auto;
-    text-align: center;
-  }
-
-  .topnav{
-    max-width: 420px;
-    background-color: #e6002d;
-    margin-top: 20px;
-  }
-
-  #menuicon{
-    position:absolute;
-    display:block;
-    font-size: 30px;
-    color: white;
-    margin-left: 90%;
-  }
-  
-  .menuList{
-    display: block;
-    position: absolute;
-    background-color: #811228;
-    min-width: 960px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 107px;
-  }
-  
-  .menuList a{
-    float: none;
-    color: white;
-    padding: 15px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border-left: none;
-  }
-  
-  #menuList {
-    overflow:hidden;
-    transition: 0.5s;
-  }
-  
-  .menuList a:nth-of-type(5){
-    display:none;
-  }
-  
-  .topnav img{
-    max-width: 150px;
-    padding: 10px
-  }
 
 
-  /*SLIDE SHOW*/
-  .slideshow-container {
-    position: relative;
-    max-width: 100%;
-  }
-
-  /*SCHEDULE*/
-  .schedule img{
-    max-width: 98%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+/*SCHEDULE*/
+.schedule img{
+  width: 960px;
+  margin: auto;
+  padding-top: 10px;
+}
 
 
-  /*AD*/
-  .ad-container{
-    position: relative;
-    min-width: 100%;
-    margin-top: 10px;
-    margin-right: 2px;
-  }
 
-  .ad-container img{
-    max-width: 48%;
-    margin: 2px 2px;
-  }
+/*AD*/
+.ad-container img{
+  width: 24.5%;
+  padding: 30px 3px;
+  padding-bottom: 20px;
+}
 
-   /*STATISTICS*/
-   .stats-container{
-    position: relative;
-    max-width: 95%;
-    padding: 5px 0;
-    margin: auto;
-  }
-  
-  .stats-child:nth-of-type(2){
-    margin-top: 35px;
-  }
-
-  .club-stats img, .player-stats img{
-    width: 100%;
-  }
-
-  .club-stats, .player-stats{
-    border: black 1px solid;
-    width: fit-content;
-  }
-
-  .title{
-    color:#e6002d;
-    font-size: 15px;
-    align-items: center;
-    position: relative;
-    width: fit-content;
-    bottom: -10px;
-  }
-
-  .stats-button button{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    font-weight: bold;
-    font-size: 15px;
-    color: grey;
-    margin: 0px 2px;
-  }
-  
- 
-  .bot-logo{
-    max-width: 100%;
-  }
-
-  /*BOTNAV*/
-  .botnav-container{
-    max-width: 420px;
-  }
-  .botnav-container img{
-    position: relative;
-    padding-bottom: 30px;
-    max-width: 420px;
-  }
-
-  .botnav-buttons{
-    position: absolute;
-    bottom: 5px;
-  }
-
-  .botnav-buttons img{
-    width: 15px;
-    right: -300px;
-  }
-
-  hr{
-    max-width: 100%;
-  }
-
+.ad-container{
+  display: flex;
+  min-width: 955px;
 }
 
 
 @media only screen and (min-width: 420px) {
-  /*TOPNAV*/
-  .topnav{
-    min-width: 960px;
-  }
-
-
-  /*SCHEDULE*/
-  .schedule img{
-    max-width: 477px;
-  }
-
-  .schedule{
-    padding-top: 15px;
-    min-width: 960px;
-  }
-
-  /*AD*/
-  .ad-container img{
-    width: 24.5%;
-    padding: 30px 3px;
-    padding-bottom: 20px;
-  }
-
-  .ad-container{
-    display: flex;
-    min-width: 955px;
-  }
-
-  /*STATISTICS*/
+/*STATISTICS*/
 .stats-container{
   display: inline-flex;
   align-items: center;
@@ -298,6 +271,11 @@ hr{
 
 .stats-child{
   padding: 10px 15px;
+}
+
+.title-club{
+  display:inline-block;
+  vertical-align: middle;
 }
 
 .title{
@@ -342,24 +320,7 @@ hr{
   width: 100%;
 }
 
-/*BOTNAV*/
-  .botnav-container img{
-    max-width: 960px;
-  }
 
-  .botnav-buttons img{
-    width: 13%;
-    border-radius: 50%;
-    padding: 0px 0px;
-    margin: 0px -3px;
-  }
-
-  .botnav-buttons{
-    position: absolute;
-    bottom: 10px;
-    right: -13%;
-  }
-  
 }
 
 
@@ -368,12 +329,27 @@ hr{
   width: 960px;
 }
 
-
 /*BOTNAV*/
 .botnav-container img{
   position: relative;
+  max-width: 960px;
   padding-bottom: 30px;
 }
+
+.botnav-buttons{
+  position: absolute;
+  bottom: 40px;
+  right: -100px;
+}
+
+.botnav-buttons img{
+  width: 13%;
+  border-radius: 50%;
+  padding: 0px 0px;
+  margin: 0px -3px;
+}
+
+
 /*UNDER CONSTRUCTION*/
 
 .under-construction{
